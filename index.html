@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+
+    <title>Affan Dzaki Abrar — Fullstack Web Developer</title>
+
+    <meta
+      name="description"
+      content="Portfolio of Affan Dzaki Abrar, a Mathematics graduate and junior fullstack web developer."
+    />
+
+    <script>
+      try {
+        var s = localStorage.getItem('theme')
+        document.documentElement.dataset.theme =
+          s ||
+          (matchMedia('(prefers-color-scheme: dark)').matches
+            ? 'dark'
+            : 'light')
+      } catch (e) {}
+
+      document.documentElement.classList.add('js')
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: { sans: ['Poppins', 'system-ui', 'sans-serif'] },
+            colors: {
+              bg: 'var(--bg)',
+              fg: 'var(--fg)',
+              brand: 'var(--brand)',
+              sage: 'var(--sage)',
+              gold: 'var(--gold)',
+              bd: 'var(--bd)',
+              sf: 'var(--sf)',
+              mute: 'var(--mute)'
+            }
+          }
+        }
+      }
+    </script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <a
+      href="#main"
+      class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[60] bg-brand text-[var(--ink)] px-3 py-2"
+      >Skip to content</a
+    >
+
+    <header
+      id="hdr"
+      class="sticky z-50 border-b border-transparent transition-colors"
+      style="top: env(safe-area-inset-top, 0px)"
+    >
+      <div
+        class="max-w-6xl mx-auto px-5 h-14 flex items-center justify-between gap-4"
+      >
+        <a href="#home" class="font-extrabold tracking-[.18em] text-sm"
+          >AFFAN<span class="text-gold">.</span></a
+        >
+
+        <nav
+          aria-label="Primary"
+          class="hidden md:flex gap-7 text-sm font-medium"
+        >
+          <a data-nav="home" href="#home" class="ul">Home</a
+          ><a data-nav="about" href="#about" class="ul">About</a
+          ><a data-nav="projects" href="#projects" class="ul">Projects</a
+          ><a data-nav="skills" href="#skills" class="ul">Skills</a
+          ><a data-nav="contact" href="#contact" class="ul">Contact</a>
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <button
+            id="theme"
+            aria-label="Toggle dark mode"
+            aria-pressed="false"
+            class="w-9 h-9 grid place-items-center border border-bd rounded-md"
+          >
+            <svg
+              id="ico"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" />
+            </svg>
+          </button>
+
+          <a
+            href="#contact"
+            class="btn btn-p !py-2 !px-4 !text-xs hidden sm:inline-flex"
+            >Let's Talk</a
+          >
+
+          <button
+            id="menu"
+            aria-label="Open menu"
+            aria-expanded="false"
+            aria-controls="drawer"
+            class="md:hidden w-9 h-9 grid place-items-center border border-bd rounded-md"
+          >
+            <svg
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <path d="M4 7h16M4 12h16M4 17h16" />
+            </svg>
+          </button>
+        </div>
+      </div>
+
+      <nav
+        id="drawer"
+        aria-label="Mobile"
+        class="hidden md:hidden bg-bg border-t border-bd px-5 py-4 flex-col gap-4 text-base font-medium"
+      >
+        <a href="#home">Home</a><a href="#about">About</a
+        ><a href="#projects">Projects</a><a href="#skills">Skills</a
+        ><a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main id="main">
+      <section
+        id="home"
+        class="max-w-6xl mx-auto px-5 pt-10 pb-16 lg:pt-16 grid lg:grid-cols-12 gap-10 items-center min-h-[calc(100svh-56px)]"
+      >
+        <div class="lg:col-span-7">
+          <p
+            class="inline-flex items-center gap-2 text-xs font-medium border border-bd rounded-full px-3 py-1 text-mute"
+          >
+            <span class="w-2 h-2 rounded-full bg-sage"></span>Open to Junior
+            Developer Opportunities
+          </p>
+
+          <p class="lbl mt-8">Fullstack Web Developer</p>
+
+          <h1 class="h-xl mt-3">
+            Turning Logic Into
+            <span class="text-brand">Digital Experiences.</span>
+          </h1>
+
+          <p class="mt-6 max-w-lg text-mute leading-relaxed">
+            I'm Affan, a web developer who enjoys transforming ideas into
+            functional, intuitive, and well-crafted digital products.
+          </p>
+
+          <div class="mt-8 flex flex-wrap gap-3">
+            <a href="#projects" data-cursor="cta" class="btn btn-p"
+              >Explore My Work</a
+            >
+
+            <a href="#contact" data-cursor="cta" class="btn btn-s"
+              >Let's Connect</a
+            >
+
+            <a data-cv download data-cursor="cta" class="btn btn-s"
+              ><svg
+                width="15"
+                height="15"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                aria-hidden="true"
+              >
+                <path d="M12 3v12m0 0l-4-4m4 4l4-4M4 20h16" /></svg
+              >Download CV</a
+            >
+          </div>
+
+          <ul
+            class="mt-10 flex flex-wrap gap-x-5 gap-y-1 text-xs font-medium text-mute tracking-wide"
+            aria-label="Core technologies"
+          >
+            <li>HTML</li>
+
+            <li>CSS</li>
+
+            <li>JavaScript</li>
+
+            <li>React</li>
+
+            <li>TypeScript</li>
+          </ul>
+        </div>
+
+        <div class="lg:col-span-5">
+          <div class="relative w-full max-w-[380px] mx-auto">
+            <div
+              class="absolute inset-0 translate-x-3 translate-y-3 border border-gold rounded-md"
+              aria-hidden="true"
+            ></div>
+
+            <div
+              id="stage"
+              data-cursor="obj"
+              class="relative aspect-[4/5] overflow-hidden rounded-md border border-bd bg-sf"
+              style="
+                transition: transform 0.2s;
+                transform: perspective(900px)
+                  rotateX(calc(var(--ry, 0) * -4deg))
+                  rotateY(calc(var(--rx, 0) * 4deg));
+              "
+            >
+              <img
+                id="photo"
+                alt="Portrait of Affan Dzaki Abrar"
+                width="760"
+                height="950"
+                class="hidden absolute inset-0 w-full h-full object-cover"
+              />
+
+              <svg
+                id="ph"
+                viewBox="0 0 100 125"
+                class="absolute inset-0 w-full h-full"
+                aria-hidden="true"
+              >
+                <circle
+                  cx="50"
+                  cy="50"
+                  r="17"
+                  fill="var(--sage)"
+                  opacity=".5"
+                />
+
+                <path
+                  d="M14 125c2-28 16-44 36-44s34 16 36 44z"
+                  fill="var(--sage)"
+                  opacity=".5"
+                />
+                <text
+                  x="50"
+                  y="115"
+                  font-size="5"
+                  text-anchor="middle"
+                  fill="var(--mute)"
+                >
+                  Your photo here
+                </text>
+              </svg>
+            </div>
+          </div>
+
+          <p class="text-center lbl !text-mute mt-2">
+            Structure. Logic. Interaction.
+          </p>
+        </div>
+
+        <a
+          href="#about"
+          class="hidden lg:flex lg:col-span-12 items-center gap-2 text-xs text-mute"
+          aria-label="Scroll to About"
+          ><span class="w-px h-8 bg-gold"></span>Scroll</a
+        >
+      </section>
+
+      <section id="about" class="border-t border-bd">
+        <div class="max-w-6xl mx-auto px-5 py-24 grid md:grid-cols-12 gap-10">
+          <div class="md:col-span-5 reveal">
+            <p class="lbl">01 / About</p>
+
+            <h2 class="h-lg mt-3">Curious by Nature. Analytical by Design.</h2>
+
+            <div class="mt-10 border-l border-bd pl-4">
+              <p class="lbl !text-gold">Education</p>
+
+              <p class="mt-1 text-sm font-medium">
+                Bachelor's Degree in Mathematics
+              </p>
+
+              <p class="text-sm text-mute">Universitas Negeri Malang</p>
+            </div>
+          </div>
+
+          <div
+            class="md:col-span-6 md:col-start-7 reveal space-y-5 text-mute leading-relaxed"
+          >
+            <p>
+              I'm a Mathematics graduate with a strong interest in web
+              development. My background has trained me to approach problems
+              logically, break complex ideas into manageable parts, and look for
+              structured solutions.
+            </p>
+
+            <p>
+              I enjoy building web applications that balance functionality,
+              usability, and maintainable code. Currently, I'm strengthening my
+              frontend engineering skills while continuing to explore fullstack
+              development.
+            </p>
+
+            <ol
+              class="pt-6 divide-y divide-bd border-y border-bd text-fg font-semibold"
+            >
+              <li class="py-3 flex gap-4">
+                <span class="text-gold text-xs pt-1">01</span>Think in Systems
+              </li>
+
+              <li class="py-3 flex gap-4">
+                <span class="text-gold text-xs pt-1">02</span>Build with Purpose
+              </li>
+
+              <li class="py-3 flex gap-4">
+                <span class="text-gold text-xs pt-1">03</span>Learn Continuously
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="border-t border-bd bg-sf">
+        <div class="max-w-6xl mx-auto px-5 py-24">
+          <div class="reveal max-w-xl">
+            <p class="lbl">02 / Selected Work</p>
+
+            <h2 class="h-lg mt-3">Selected Projects.</h2>
+
+            <p class="mt-4 text-mute">
+              A collection of projects where I explore interfaces, application
+              logic, and practical problem-solving.
+            </p>
+          </div>
+
+          <div id="plist" class="mt-14 space-y-20"></div>
+        </div>
+      </section>
+
+      <section id="skills" class="border-t border-bd">
+        <div class="max-w-6xl mx-auto px-5 py-24">
+          <div class="reveal">
+            <p class="lbl">03 / Toolkit</p>
+
+            <h2 class="h-lg mt-3">Tools I Use to Build.</h2>
+          </div>
+
+          <div
+            id="slist"
+            class="mt-12 grid sm:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-10 reveal"
+          ></div>
+
+          <p class="mt-10 text-xs text-mute max-w-md">
+            Depth varies across tools — I'm still growing across the stack and
+            learning something new with each project.
+          </p>
+        </div>
+      </section>
+
+      <section id="process" class="border-t border-bd bg-sf">
+        <div class="max-w-6xl mx-auto px-5 py-24">
+          <div class="reveal">
+            <p class="lbl">04 / Process</p>
+
+            <h2 class="h-lg mt-3">From Problem to Product.</h2>
+          </div>
+
+          <ol id="steps" class="mt-14 grid md:grid-cols-4 gap-10 md:gap-6"></ol>
+        </div>
+      </section>
+
+      <section id="contact" class="border-t border-bd">
+        <div class="max-w-6xl mx-auto px-5 py-24 reveal">
+          <p class="lbl">05 / Contact</p>
+
+          <h2 class="h-xl mt-3 max-w-3xl">Have a Project in Mind?</h2>
+
+          <p class="mt-6 max-w-lg text-mute">
+            I'm open to junior developer opportunities, collaboration, and
+            conversations about building useful digital products.
+          </p>
+
+          <ul class="mt-8 max-w-xl divide-y divide-bd border-y border-bd">
+            <li class="flex items-center gap-3 py-4">
+              <a
+                id="mail"
+                aria-label="Send email"
+                class="flex items-center gap-4 min-w-0 flex-1"
+                ><span class="ic"
+                  ><svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    aria-hidden="true"
+                  >
+                    <rect x="3" y="5" width="18" height="14" rx="2" />
+
+                    <path d="M3 7l9 6 9-6" /></svg></span
+                ><span class="min-w-0"
+                  ><span class="block lbl !text-mute">Email</span
+                  ><span
+                    id="mailv"
+                    class="block font-medium truncate"
+                  ></span></span></a
+              ><button
+                id="copy"
+                type="button"
+                data-cursor="copy"
+                class="btn btn-s !py-1.5 !px-3 !text-xs"
+              >
+                Copy
+              </button>
+            </li>
+
+            <li class="py-4">
+              <a
+                id="gh"
+                target="_blank"
+                rel="noopener"
+                aria-label="GitHub profile"
+                class="flex items-center gap-4 min-w-0"
+                ><span class="ic"
+                  ><svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a10.9 10.9 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"
+                    /></svg></span
+                ><span class="min-w-0"
+                  ><span class="block lbl !text-mute">GitHub</span
+                  ><span
+                    id="ghv"
+                    class="block font-medium truncate"
+                  ></span></span
+              ></a>
+            </li>
+
+            <li class="py-4">
+              <a
+                id="li"
+                target="_blank"
+                rel="noopener"
+                aria-label="LinkedIn profile"
+                class="flex items-center gap-4 min-w-0"
+                ><span class="ic"
+                  ><svg
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                    fill="currentColor"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11.5H3zM9.5 9.75h3.8v1.6h.05c.53-1 1.83-2 3.77-2 4 0 4.78 2.6 4.78 6v5.9h-4v-5.1c0-1.2 0-2.8-1.7-2.8s-1.95 1.3-1.95 2.7v5.2h-4z"
+                    /></svg></span
+                ><span class="min-w-0"
+                  ><span class="block lbl !text-mute">LinkedIn</span
+                  ><span
+                    id="liv"
+                    class="block font-medium truncate"
+                  ></span></span
+              ></a>
+            </li>
+          </ul>
+
+          <a data-cv download data-cursor="cta" class="btn btn-p mt-8"
+            ><svg
+              width="15"
+              height="15"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              aria-hidden="true"
+            >
+              <path d="M12 3v12m0 0l-4-4m4 4l4-4M4 20h16" /></svg
+            >Download CV</a
+          >
+
+          <p
+            id="toast"
+            role="status"
+            aria-live="polite"
+            class="mt-4 text-sm text-brand min-h-[1.5rem]"
+          ></p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-bd">
+      <p class="max-w-6xl mx-auto px-5 py-8 text-xs text-mute">
+        © <span id="yr"></span> — Designed and built by Affan Dzaki Abrar.
+      </p>
+    </footer>
+
+    <div class="cur" id="cur" aria-hidden="true">
+      <div class="ring"></div>
+
+      <div class="dot"></div>
+
+      <div class="t" id="curt"></div>
+    </div>
+
+    <script src="script.js" defer></script>
+  </body>
+</html>
