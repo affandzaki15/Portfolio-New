@@ -37,6 +37,10 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css"
+    />
 
     <script src="https://cdn.tailwindcss.com/3.4.17"></script>
 
@@ -79,7 +83,7 @@
         class="max-w-6xl mx-auto px-5 h-14 flex items-center justify-between gap-4"
       >
         <a href="#home" class="font-extrabold tracking-[.18em] text-sm"
-          >AFFAN<span class="text-gold">.</span></a
+          >AFFAN-PORTFOLIO<span class="text-gold">.</span></a
         >
 
         <nav
@@ -154,140 +158,84 @@
     </header>
 
     <main id="main">
-      <section
-        id="home"
-        class="max-w-6xl mx-auto px-5 pt-10 pb-16 lg:pt-16 grid lg:grid-cols-12 gap-10 items-center min-h-[calc(100svh-56px)]"
-      >
-        <div class="lg:col-span-7">
-          <p
-            class="inline-flex items-center gap-2 text-xs font-medium border border-bd rounded-full px-3 py-1 text-mute"
-          >
-            <span class="w-2 h-2 rounded-full bg-sage"></span>Open to Junior
-            Developer Opportunities
-          </p>
+     <section id="home" class="hero relative overflow-hidden">
+  <div class="hero__light" aria-hidden="true"></div>
+  <div class="hero__beam" aria-hidden="true"></div>
 
-          <p class="lbl mt-8">Fullstack Web Developer</p>
+  <div class="hero__inner max-w-6xl mx-auto px-5">
+    <!-- Left: introduction -->
+    <div class="hero__content">
+      <p class="lbl hero__eyebrow">Halo, Saya</p>
 
-          <h1 class="h-xl mt-3">
-            Turning Logic Into
-            <span class="text-brand">Digital Experiences.</span>
-          </h1>
+      <h1 class="hero__name">
+        <span class="hero__name-solid">AFFAN DZAKI</span>
+        <span class="hero__name-outline">ABRAR</span>
+      </h1>
 
-          <p class="mt-6 max-w-lg text-mute leading-relaxed">
-            I'm Affan, a web developer who enjoys transforming ideas into
-            functional, intuitive, and well-crafted digital products.
-          </p>
+      <p class="hero__role">
+        Fullstack Web Developer
+        <span>Web &amp; Software Engineer</span>
+      </p>
 
-          <div class="mt-8 flex flex-wrap gap-3">
-            <a href="#projects" data-cursor="cta" class="btn btn-p"
-              >Explore My Work</a
-            >
+      <p class="hero__description">
+        Saya merancang dan membangun aplikasi web modern,
+        dari antarmuka yang intuitif hingga sistem backend
+        yang terstruktur, efisien, dan mudah dikembangkan.
+      </p>
 
-            <a href="#contact" data-cursor="cta" class="btn btn-s"
-              >Let's Connect</a
-            >
+      <div class="hero__actions">
+        <a href="#projects" class="btn btn-p" data-cursor="cta">
+          Lihat Proyek <span aria-hidden="true">→</span>
+        </a>
 
-            <a data-cv download data-cursor="cta" class="btn btn-s"
-              ><svg
-                width="15"
-                height="15"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="2"
-                aria-hidden="true"
-              >
-                <path d="M12 3v12m0 0l-4-4m4 4l4-4M4 20h16" /></svg
-              >Download CV</a
-            >
-          </div>
+        <a href="#contact" class="btn btn-s hero__contact"
+           data-cursor="cta">
+          Kontak Saya
+        </a>
+      </div>
 
-          <ul
-            class="mt-10 flex flex-wrap gap-x-5 gap-y-1 text-xs font-medium text-mute tracking-wide"
-            aria-label="Core technologies"
-          >
-            <li>HTML</li>
+      <div class="hero__meta">
+        <span>HTML</span>
+        <span>CSS</span>
+        <span>JavaScript</span>
+        <span>React</span>
+        <span>Node.js</span>
+      </div>
+    </div>
 
-            <li>CSS</li>
+    <!-- Right: profile -->
+    <div class="hero__visual">
+      <div class="hero__portrait">
+        <div class="hero__portrait-ring"></div>
 
-            <li>JavaScript</li>
-
-            <li>React</li>
-
-            <li>TypeScript</li>
-          </ul>
+        <div id="stage" class="hero__portrait-stage" data-cursor="obj">
+          <img
+            id="photo"
+            src="image/removed-background.png"
+            alt="Foto profil Affan Dzaki Abrar"
+            width="760"
+            height="950"
+          />
         </div>
 
-        <div class="lg:col-span-5">
-          <div class="relative w-full max-w-[380px] mx-auto">
-            <div
-              class="absolute inset-0 translate-x-3 translate-y-3 border border-gold rounded-md"
-              aria-hidden="true"
-            ></div>
-
-            <div
-              id="stage"
-              data-cursor="obj"
-              class="relative aspect-[4/5] overflow-hidden rounded-md border border-bd bg-sf"
-              style="
-                transition: transform 0.2s;
-                transform: perspective(900px)
-                  rotateX(calc(var(--ry, 0) * -4deg))
-                  rotateY(calc(var(--rx, 0) * 4deg));
-              "
-            >
-              <img
-                id="photo"
-                alt="Portrait of Affan Dzaki Abrar"
-                width="760"
-                height="950"
-                class="hidden absolute inset-0 w-full h-full object-cover"
-              />
-
-              <svg
-                id="ph"
-                viewBox="0 0 100 125"
-                class="absolute inset-0 w-full h-full"
-                aria-hidden="true"
-              >
-                <circle
-                  cx="50"
-                  cy="50"
-                  r="17"
-                  fill="var(--sage)"
-                  opacity=".5"
-                />
-
-                <path
-                  d="M14 125c2-28 16-44 36-44s34 16 36 44z"
-                  fill="var(--sage)"
-                  opacity=".5"
-                />
-                <text
-                  x="50"
-                  y="115"
-                  font-size="5"
-                  text-anchor="middle"
-                  fill="var(--mute)"
-                >
-                  Your photo here
-                </text>
-              </svg>
-            </div>
-          </div>
-
-          <p class="text-center lbl !text-mute mt-2">
-            Structure. Logic. Interaction.
-          </p>
+        <div class="hero__availability">
+          <span class="hero__status-dot"></span>
+          <span>AVAILABLE FOR WORK</span>
         </div>
 
-        <a
-          href="#about"
-          class="hidden lg:flex lg:col-span-12 items-center gap-2 text-xs text-mute"
-          aria-label="Scroll to About"
-          ><span class="w-px h-8 bg-gold"></span>Scroll</a
-        >
-      </section>
+        <div class="hero__code">
+          <span>&lt;fullstack-developer&gt;</span>
+          <strong>ideas.intoReality()</strong>
+          <span>&lt;/fullstack-developer&gt;</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <a href="#about" class="hero__scroll" aria-label="Scroll to About">
+    <span></span> SCROLL TO EXPLORE
+  </a>
+</section>
 
       <section id="about" class="border-t border-bd">
         <div class="max-w-6xl mx-auto px-5 py-24 grid md:grid-cols-12 gap-10">

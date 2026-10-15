@@ -130,53 +130,32 @@ const tx = (t, c, y = 16, s = 9, x = 12, a = "middle") =>
   `<text x="${x}" y="${y}" font-size="${s}" font-weight="700" text-anchor="${a}" fill="${c}">${t}</text>`;
 
 const T = [
-  [
-    "HTML",
-    '<path d="M3 2l1.7 19L12 23l7.3-2L21 2z" fill="#E34F26"/>' +
-      tx("5", "#fff", 17, 11),
-  ],
-  [
-    "CSS",
-    '<path d="M3 2l1.7 19L12 23l7.3-2L21 2z" fill="#1572B6"/>' +
-      tx("3", "#fff", 17, 11),
-  ],
-  [
-    "JavaScript",
-    '<rect x="2" y="2" width="20" height="20" rx="2" fill="#F7DF1E"/>' +
-      tx("JS", "#000", 19.5, 9, 20.5, "end"),
-  ],
-  [
-    "TypeScript",
-    '<rect x="2" y="2" width="20" height="20" rx="2" fill="#3178C6"/>' +
-      tx("TS", "#fff", 19.5, 9, 20.5, "end"),
-  ],
-  [
-    "React.js",
-    '<g fill="none" stroke="#61DAFB" stroke-width="1.2"><ellipse cx="12" cy="12" rx="10" ry="4"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="10" ry="4" transform="rotate(120 12 12)"/></g><circle cx="12" cy="12" r="1.8" fill="#61DAFB"/>',
-  ],
-  [
-    "Tailwind CSS",
-    '<path fill="#38BDF8" d="M12 6c-2.67 0-4.33 1.33-5 4 1-1.33 2.17-1.83 3.5-1.5.76.19 1.31.74 1.91 1.35.98 1 2.09 2.15 4.59 2.15 2.67 0 4.33-1.33 5-4-1 1.33-2.17 1.83-3.5 1.5-.76-.19-1.3-.74-1.91-1.35C15.61 7.15 14.5 6 12 6zm-5 6c-2.67 0-4.33 1.33-5 4 1-1.33 2.17-1.83 3.5-1.5.76.19 1.3.74 1.91 1.35C8.39 16.85 9.5 18 12 18c2.67 0 4.33-1.33 5-4-1 1.33-2.17 1.83-3.5 1.5-.76-.19-1.3-.74-1.91-1.35C10.61 13.15 9.5 12 7 12z"/>',
-  ],
-  [
-    "Node.js",
-    '<path d="M12 2l8.7 5v10L12 22l-8.7-5V7z" fill="#5FA04E"/>' +
-      tx("N", "#fff", 16, 10),
-  ],
-  [
-    "Express.js",
-    '<rect x="2.5" y="2.5" width="19" height="19" rx="3" fill="none" stroke="currentColor" stroke-width="1.4"/>' +
-      tx("ex", "currentColor", 16, 10),
-  ],
-  [
-    "PostgreSQL",
-    '<rect x="2" y="2" width="20" height="20" rx="6" fill="#336791"/>' +
-      tx("Pg", "#fff", 15.5, 9),
-  ],
+  ["HTML", "devicon-html5-plain colored"],
+  ["CSS", "devicon-css3-plain colored"],
+  ["JavaScript", "devicon-javascript-plain colored"],
+  ["TypeScript", "devicon-typescript-plain colored"],
+  ["React.js", "devicon-react-original colored"],
+  ["Tailwind CSS", "devicon-tailwindcss-original colored"],
+  ["Node.js", "devicon-nodejs-plain colored"],
+  ["Express.js", "devicon-express-original"],
+  ["PostgreSQL", "devicon-postgresql-plain colored"],
+  ["PHP", "devicon-php-plain colored"],
+  ["MySQL", "devicon-mysql-original colored"],
+  ["Bootstrap", "devicon-bootstrap-plain colored"],
 ];
 
+
 $("#slist").innerHTML =
-  `<div class="sm:col-span-2 lg:col-span-4"><h3 class="lbl border-b border-bd pb-2">Core Stack</h3><ul class="mt-5 grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-9 gap-3">${T.map(([n, s]) => `<li class="border border-bd rounded-md py-4 px-1 flex flex-col items-center gap-2 text-center"><svg viewBox="0 0 24 24" width="32" height="32" role="img" aria-label="${n} logo">${s}</svg><span class="text-xs font-medium">${n}</span></li>`).join("")}</ul></div><div class="sm:col-span-2 lg:col-span-4"><h3 class="lbl border-b border-bd pb-2">Tools &amp; Workflow</h3><ul class="mt-4 flex flex-wrap gap-2">${["Git", "GitHub", "REST APIs", "Responsive Design", "Debugging", "Basic Testing"].map((x) => `<li class="tag">${x}</li>`).join("")}</ul></div>`;
+  `<div class="sm:col-span-2 lg:col-span-4"><h3 class="lbl border-b border-bd pb-2">Core Stack</h3><ul class="mt-5 grid grid-cols-3 sm:grid-cols-5 lg:grid-cols-9 gap-3">${T.map(
+    ([n, icon]) => `
+  <li class="border border-bd rounded-md py-4 px-1 flex flex-col items-center gap-2 text-center">
+    <i class="${icon}" style="font-size: 32px" aria-hidden="true"></i>
+    <span class="text-xs font-medium">${n}</span>
+  </li>
+`,
+  ).join(
+    "",
+  )}</ul></div><div class="sm:col-span-2 lg:col-span-4"><h3 class="lbl border-b border-bd pb-2">Tools &amp; Workflow</h3><ul class="mt-4 flex flex-wrap gap-2">${["Git", "GitHub", "REST APIs", "Responsive Design", "Debugging", "Basic Testing"].map((x) => `<li class="tag">${x}</li>`).join("")}</ul></div>`;
 
 $("#steps").innerHTML = [
   ["Understand", "Clarify the problem, user needs, and project constraints."],
@@ -348,34 +327,32 @@ if (matchMedia("(hover:hover) and (pointer:fine)").matches && !reduce) {
 /* ---------- photo: set CONFIG.photo to your image path/URL ---------- */
 
 (() => {
-  const img = $("#photo"),
-    ph = $("#ph"),
-    box = $("#stage");
+  const img = $("#photo");
+  const box = $("#stage");
 
   if (CONFIG.photo) {
     img.src = CONFIG.photo;
-    img.onload = () => {
-      img.classList.remove("hidden");
-      ph.classList.add("hidden");
-    };
   }
 
-  if (!reduce && matchMedia("(hover:hover)").matches) {
-    box.addEventListener(
-      "pointermove",
-      (e) => {
-        const r = box.getBoundingClientRect();
-        box.style.setProperty(
-          "--rx",
-          ((e.clientX - r.left) / r.width - 0.5).toFixed(2),
-        );
-        box.style.setProperty(
-          "--ry",
-          ((e.clientY - r.top) / r.height - 0.5).toFixed(2),
-        );
-      },
-      { passive: true },
-    );
+  img.addEventListener("error", () => {
+    console.error("Foto tidak ditemukan:", img.src);
+  });
+
+  if (!reduce && matchMedia("(hover:hover)").matches && box) {
+    box.addEventListener("pointermove", (e) => {
+      const r = box.getBoundingClientRect();
+
+      box.style.setProperty(
+        "--rx",
+        ((e.clientX - r.left) / r.width - 0.5).toFixed(2)
+      );
+
+      box.style.setProperty(
+        "--ry",
+        ((e.clientY - r.top) / r.height - 0.5).toFixed(2)
+      );
+    });
+
     box.addEventListener("pointerleave", () => {
       box.style.setProperty("--rx", 0);
       box.style.setProperty("--ry", 0);
