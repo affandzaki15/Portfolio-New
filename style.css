@@ -887,3 +887,69 @@ a.clink:hover,
     transform: none;
   }
 }
+
+
+/* ---------- Contact: responsive layout ---------- */
+
+#contact,
+#contact .sec__inner,
+#contact .split,
+#contact .split > *,
+#contact .reveal {
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+#contact .clink {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 0;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+#contact .clink > a {
+  flex: 1 1 0%;
+  min-width: 0;
+}
+
+#contact .clink .ic,
+#contact .clink button {
+  flex-shrink: 0;
+}
+
+#contact .clink span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* ---------- Contact: mobile ---------- */
+
+@media (max-width: 640px) {
+  #contact .sec__inner {
+    padding: 4rem 1rem;
+  }
+
+  #contact .split {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
+  }
+
+  #contact .h-lg,
+  #contact .sec__lead {
+    max-width: 100%;
+    overflow-wrap: anywhere;
+  }
+
+  #contact .clink {
+    padding: 12px;
+    gap: 10px;
+  }
+
+  #contact .clink button {
+    padding-inline: 10px;
+  }
+}
