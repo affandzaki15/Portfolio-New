@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en" data-theme="light">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="utf-8" />
 
@@ -19,11 +19,7 @@
     <script>
       try {
         var s = localStorage.getItem('theme')
-        document.documentElement.dataset.theme =
-          s ||
-          (matchMedia('(prefers-color-scheme: dark)').matches
-            ? 'dark'
-            : 'light')
+        document.documentElement.dataset.theme = s || 'dark'
       } catch (e) {}
 
       document.documentElement.classList.add('js')
@@ -92,8 +88,10 @@
         >
           <a data-nav="home" href="#home" class="ul">Home</a
           ><a data-nav="about" href="#about" class="ul">About</a
-          ><a data-nav="projects" href="#projects" class="ul">Projects</a
+          ><a data-nav="education" href="#education" class="ul">Education</a
           ><a data-nav="skills" href="#skills" class="ul">Skills</a
+          ><a data-nav="experience" href="#experience" class="ul">Experience</a
+          ><a data-nav="projects" href="#projects" class="ul">Projects</a
           ><a data-nav="contact" href="#contact" class="ul">Contact</a>
         </nav>
 
@@ -152,168 +150,189 @@
         class="hidden md:hidden bg-bg border-t border-bd px-5 py-4 flex-col gap-4 text-base font-medium"
       >
         <a href="#home">Home</a><a href="#about">About</a
-        ><a href="#projects">Projects</a><a href="#skills">Skills</a
+        ><a href="#education">Education</a><a href="#skills">Skills</a
+        ><a href="#experience">Experience</a><a href="#projects">Projects</a
         ><a href="#contact">Contact</a>
       </nav>
     </header>
 
     <main id="main">
-     <section id="home" class="hero relative overflow-hidden">
-  <div class="hero__light" aria-hidden="true"></div>
-  <div class="hero__beam" aria-hidden="true"></div>
+      <section id="home" class="hero relative overflow-hidden">
+        <div class="hero__light" aria-hidden="true"></div>
+        <div class="hero__beam" aria-hidden="true"></div>
 
-  <div class="hero__inner max-w-6xl mx-auto px-5">
-    <!-- Left: introduction -->
-    <div class="hero__content">
-      <p class="lbl hero__eyebrow">Halo, Saya</p>
+        <div class="hero__inner max-w-6xl mx-auto px-5">
+          <!-- Left: introduction -->
+          <div class="hero__content">
+            <p class="lbl hero__eyebrow">Halo, Saya</p>
 
-      <h1 class="hero__name">
-        <span class="hero__name-solid">AFFAN DZAKI</span>
-        <span class="hero__name-outline">ABRAR</span>
-      </h1>
+            <h1 class="hero__name">
+              <span class="hero__name-solid">AFFAN DZAKI</span>
+              <span class="hero__name-outline">ABRAR</span>
+            </h1>
 
-      <p class="hero__role">
-        Fullstack Web Developer
-        <span>Web &amp; Software Engineer</span>
-      </p>
+            <p class="hero__role">
+              <span>Fullstack Web Developer</span>
+            </p>
 
-      <p class="hero__description">
-        Saya merancang dan membangun aplikasi web modern,
-        dari antarmuka yang intuitif hingga sistem backend
-        yang terstruktur, efisien, dan mudah dikembangkan.
-      </p>
+            <p class="hero__description">
+              Saya Affan, seorang Fullstack Web Developer yang tertarik
+              membangun aplikasi web yang fungsional, responsif, dan mudah
+              digunakan melalui kode yang terstruktur dan solusi yang tepat.
+            </p>
 
-      <div class="hero__actions">
-        <a href="#projects" class="btn btn-p" data-cursor="cta">
-          Lihat Proyek <span aria-hidden="true">→</span>
-        </a>
+            <div class="hero__actions">
+              <a href="#projects" class="btn btn-p">
+                Lihat Proyek <span aria-hidden="true">→</span>
+              </a>
 
-        <a href="#contact" class="btn btn-s hero__contact"
-           data-cursor="cta">
-          Kontak Saya
-        </a>
-      </div>
-
-      <div class="hero__meta">
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>React</span>
-        <span>Node.js</span>
-      </div>
-    </div>
-
-    <!-- Right: profile -->
-    <div class="hero__visual">
-      <div class="hero__portrait">
-        <div class="hero__portrait-ring"></div>
-
-        <div id="stage" class="hero__portrait-stage" data-cursor="obj">
-          <img
-            id="photo"
-            src="image/removed-background.png"
-            alt="Foto profil Affan Dzaki Abrar"
-            width="760"
-            height="950"
-          />
-        </div>
-
-        <div class="hero__availability">
-          <span class="hero__status-dot"></span>
-          <span>AVAILABLE FOR WORK</span>
-        </div>
-
-        <div class="hero__code">
-          <span>&lt;fullstack-developer&gt;</span>
-          <strong>ideas.intoReality()</strong>
-          <span>&lt;/fullstack-developer&gt;</span>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <a href="#about" class="hero__scroll" aria-label="Scroll to About">
-    <span></span> SCROLL TO EXPLORE
-  </a>
-</section>
-
-      <section id="about" class="border-t border-bd">
-        <div class="max-w-6xl mx-auto px-5 py-24 grid md:grid-cols-12 gap-10">
-          <div class="md:col-span-5 reveal">
-            <p class="lbl">01 / About</p>
-
-            <h2 class="h-lg mt-3">Curious by Nature. Analytical by Design.</h2>
-
-            <div class="mt-10 border-l border-bd pl-4">
-              <p class="lbl !text-gold">Education</p>
-
-              <p class="mt-1 text-sm font-medium">
-                Bachelor's Degree in Mathematics
-              </p>
-
-              <p class="text-sm text-mute">Universitas Negeri Malang</p>
+              <a href="YOUR_CV_FILE.pdf" data-cv download class="btn btn-s hero__contact">
+                Download CV
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  aria-hidden="true"
+                >
+                  <path d="M12 3v12m0 0l-4-4m4 4l4-4M4 20h16" />
+                </svg>
+              </a>
             </div>
           </div>
 
-          <div
-            class="md:col-span-6 md:col-start-7 reveal space-y-5 text-mute leading-relaxed"
-          >
-            <p>
-              I'm a Mathematics graduate with a strong interest in web
-              development. My background has trained me to approach problems
-              logically, break complex ideas into manageable parts, and look for
-              structured solutions.
-            </p>
+          <!-- Right: profile -->
+          <div class="hero__visual">
+            <div class="hero__portrait">
+              <div class="hero__portrait-ring"></div>
 
-            <p>
-              I enjoy building web applications that balance functionality,
-              usability, and maintainable code. Currently, I'm strengthening my
-              frontend engineering skills while continuing to explore fullstack
-              development.
-            </p>
+              <div id="stage" class="hero__portrait-stage">
+                <img
+                  id="photo"
+                  src="image/removed-background.png"
+                  alt="Foto profil Affan Dzaki Abrar"
+                  width="760"
+                  height="950"
+                />
+              </div>
 
-            <ol
-              class="pt-6 divide-y divide-bd border-y border-bd text-fg font-semibold"
-            >
-              <li class="py-3 flex gap-4">
-                <span class="text-gold text-xs pt-1">01</span>Think in Systems
-              </li>
+              <div class="hero__availability">
+                <span class="hero__status-dot"></span>
+                <span>AVAILABLE FOR WORK</span>
+              </div>
 
-              <li class="py-3 flex gap-4">
-                <span class="text-gold text-xs pt-1">02</span>Build with Purpose
-              </li>
+              <div class="hero__code">
+                <span>const developer = {</span>
+                <strong>"Fullstack Web Developer"</strong>
+                <span>};</span>
+              </div>
+            </div>
+          </div>
+        </div>
 
-              <li class="py-3 flex gap-4">
-                <span class="text-gold text-xs pt-1">03</span>Learn Continuously
+        <a href="#about" class="hero__scroll" aria-label="Scroll to About">
+          <span></span> SCROLL TO EXPLORE
+        </a>
+      </section>
+
+      <!-- ABOUT -->
+      <section id="about" class="sec">
+        <div class="sec__inner">
+          <div class="split">
+            <div class="split__head reveal">
+              <p class="eyebrow">About</p>
+              <h2 class="h-lg mt-4">
+                Logical by nature.
+                <span class="outline">Creative Through Code.</span>
+              </h2>
+            </div>
+
+            <div class="reveal space-y-5 text-mute leading-relaxed">
+              <p>
+                Saya Affan Dzaki Abrar, lulusan S1 Matematika dengan peminatan
+                Rekayasa Perangkat Lunak (RPL) dari Universitas Negeri Malang.
+                Saya memiliki pengalaman magang di bidang pengembangan web serta
+                mengikuti bootcamp React.js dan Fullstack Web Development untuk
+                memperkuat keterampilan teknis melalui praktik dan proyek nyata.
+              </p>
+              <p>
+                Saya tertarik membangun aplikasi web dari frontend hingga
+                backend menggunakan JavaScript, TypeScript, React, Tailwind CSS,
+                Node.js, Express.js, dan PostgreSQL. Saya berfokus pada
+                pengembangan fitur yang fungsional, antarmuka yang responsif,
+                serta kode yang terstruktur dan mudah dipelihara.
+              </p>
+            </div>
+          </div>
+
+          <ul class="pillars reveal">
+            <li>
+              <b>Think analytically</b>
+              <p>Memecah masalah kompleks menjadi solusi yang terstruktur.</p>
+            </li>
+            <li>
+              <b>Build with purpose</b>
+              <p>
+                Mengembangkan fitur yang fungsional dan bermanfaat bagi
+                pengguna.
+              </p>
+            </li>
+            <li>
+              <b>Keep improving</b>
+              <p>Terus belajar melalui proyek dan praktik pengembangan web.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- EDUCATION -->
+      <!--
+        Tambah pendidikan: salin satu blok <li class="tl reveal"> ... </li>
+        lalu tempel di bawahnya. Poin-poin (<ul>) boleh dihapus jika tidak perlu.
+      -->
+      <section id="education" class="sec sec--alt">
+        <div class="sec__inner">
+          <div class="split">
+            <div class="split__head reveal">
+              <p class="eyebrow">Education</p>
+              <h2 class="h-lg mt-4">
+                Where I
+                <span class="outline">learned to think.</span>
+              </h2>
+              <p class="sec__lead">
+                Formal training that shapes how I reason about problems and
+                structure solutions.
+              </p>
+            </div>
+
+            <ol class="tl-list">
+              <li class="tl reveal">
+                <div class="panel">
+                  <p class="meta">YEAR — YEAR</p>
+                  <h3>S1 Matematika — Peminatan Rekayasa Perangkat Lunak (RPL)</h3>
+                  <p class="tl__org">Universitas Negeri Malang</p>
+                  <ul>
+                    <li>Tambahkan IPK, judul skripsi, atau mata kuliah utama.</li>
+                    <li>Tambahkan prestasi atau organisasi yang relevan.</li>
+                  </ul>
+                </div>
               </li>
             </ol>
           </div>
         </div>
       </section>
 
-      <section id="projects" class="border-t border-bd bg-sf">
-        <div class="max-w-6xl mx-auto px-5 py-24">
-          <div class="reveal max-w-xl">
-            <p class="lbl">02 / Selected Work</p>
-
-            <h2 class="h-lg mt-3">Selected Projects.</h2>
-
-            <p class="mt-4 text-mute">
-              A collection of projects where I explore interfaces, application
-              logic, and practical problem-solving.
-            </p>
-          </div>
-
-          <div id="plist" class="mt-14 space-y-20"></div>
-        </div>
-      </section>
-
-      <section id="skills" class="border-t border-bd">
-        <div class="max-w-6xl mx-auto px-5 py-24">
+      <!-- SKILLS -->
+      <section id="skills" class="sec">
+        <div class="sec__inner">
           <div class="reveal">
-            <p class="lbl">03 / Toolkit</p>
-
-            <h2 class="h-lg mt-3">Tools I Use to Build.</h2>
+            <p class="eyebrow">Toolkit</p>
+            <h2 class="h-lg mt-4">
+              Tools I use
+              <span class="outline">to build.</span>
+            </h2>
           </div>
 
           <div
@@ -328,73 +347,300 @@
         </div>
       </section>
 
-      <section id="process" class="border-t border-bd bg-sf">
-        <div class="max-w-6xl mx-auto px-5 py-24">
-          <div class="reveal">
-            <p class="lbl">04 / Process</p>
+      <!-- EXPERIENCE -->
+      <!--
+        Tambah pengalaman: salin satu blok <li class="tl reveal"> ... </li>
+        lalu tempel di bawahnya (urutkan dari yang terbaru).
+      -->
+      <section id="experience" class="sec sec--alt">
+        <div class="sec__inner">
+          <div class="split">
+            <div class="split__head reveal">
+              <p class="eyebrow">Experience</p>
+              <h2 class="h-lg mt-4">
+                Where I've
+                <span class="outline">put it to work.</span>
+              </h2>
+              <p class="sec__lead">
+                Hands-on work, internships, and bootcamps that turned what I
+                learned into shipped features.
+              </p>
+            </div>
 
-            <h2 class="h-lg mt-3">From Problem to Product.</h2>
+            <ol class="tl-list">
+              <li class="tl reveal">
+                <div class="panel">
+                  <p class="meta">YEAR — YEAR</p>
+                  <h3>Web Development Intern</h3>
+                  <p class="tl__org">YOUR_COMPANY</p>
+                  <ul>
+                    <li>Jelaskan apa yang kamu bangun atau perbaiki, dan hasilnya.</li>
+                    <li>Sebutkan teknologi yang kamu gunakan.</li>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="tl reveal">
+                <div class="panel">
+                  <p class="meta">YEAR — YEAR</p>
+                  <h3>Fullstack Web Development Bootcamp</h3>
+                  <p class="tl__org">YOUR_BOOTCAMP_PROVIDER</p>
+                  <ul>
+                    <li>Jelaskan materi utama dan proyek akhir yang kamu kerjakan.</li>
+                  </ul>
+                </div>
+              </li>
+
+              <li class="tl reveal">
+                <div class="panel">
+                  <p class="meta">YEAR — YEAR</p>
+                  <h3>React.js Bootcamp</h3>
+                  <p class="tl__org">YOUR_BOOTCAMP_PROVIDER</p>
+                  <ul>
+                    <li>Jelaskan materi utama dan proyek yang kamu kerjakan.</li>
+                  </ul>
+                </div>
+              </li>
+            </ol>
           </div>
-
-          <ol id="steps" class="mt-14 grid md:grid-cols-4 gap-10 md:gap-6"></ol>
         </div>
       </section>
 
-      <section id="contact" class="border-t border-bd">
-        <div class="max-w-6xl mx-auto px-5 py-24 reveal">
-          <p class="lbl">05 / Contact</p>
+      <!-- PROJECTS -->
+      <!--
+        Ganti link "View Project" (demo) dan "Source Code" (repo) langsung
+        di tiap <article> di bawah. Ganti YOUR_* dengan URL kamu.
+      -->
+      <section id="projects" class="sec">
+        <div class="sec__inner">
+          <div class="reveal">
+            <p class="eyebrow">Selected work</p>
+            <h2 class="h-lg mt-4">
+              Proyek
+              <span class="outline">pilihan.</span>
+            </h2>
+            <p class="sec__lead">
+              Kumpulan proyek yang menampilkan kemampuan saya dalam membangun
+              aplikasi web, mengembangkan fungsionalitas, dan menerapkan solusi
+              untuk kebutuhan nyata.
+            </p>
+          </div>
 
-          <h2 class="h-xl mt-3 max-w-3xl">Have a Project in Mind?</h2>
+          <div class="mt-14 space-y-8">
+            <!-- Project 1: Movie Tracker -->
+            <article class="proj reveal grid md:grid-cols-12 gap-8 items-center">
+              <div class="md:col-span-7">
+                <div class="pv aspect-[16/10] bg-sf border border-bd rounded-sm overflow-hidden" aria-hidden="true">
+                  <div class="p-5 h-full flex flex-col gap-3">
+                    <div class="h-7 border border-bd rounded px-3 text-[10px] text-mute flex items-center">Search shows…</div>
+                    <div class="grid grid-cols-4 gap-2 flex-1">
+                      <div class="rounded-sm bg-brand" style="opacity:0.45"></div>
+                      <div class="rounded-sm bg-sage" style="opacity:0.6"></div>
+                      <div class="rounded-sm bg-bd" style="opacity:0.75"></div>
+                      <div class="rounded-sm bg-brand" style="opacity:0.9"></div>
+                      <div class="rounded-sm bg-sage" style="opacity:0.45"></div>
+                      <div class="rounded-sm bg-bd" style="opacity:0.6"></div>
+                      <div class="rounded-sm bg-brand" style="opacity:0.75"></div>
+                      <div class="rounded-sm bg-sage" style="opacity:0.9"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-          <p class="mt-6 max-w-lg text-mute">
-            I'm open to junior developer opportunities, collaboration, and
-            conversations about building useful digital products.
-          </p>
+              <div class="md:col-span-5">
+                <p class="text-gold text-sm font-bold">01</p>
+                <p class="lbl mt-1">Frontend Development</p>
+                <h3 class="text-2xl font-bold mt-1 tracking-tight">Movie Tracker</h3>
+                <p class="mt-3 text-mute text-sm leading-relaxed">
+                  A movie discovery and watchlist application that allows users to search for shows, review details, and organize titles they want to watch.
+                </p>
+            <ul class="mt-3 text-sm text-mute space-y-1">
+              <li class="flex gap-2"><span class="text-sage">—</span>Search integration with the TVMaze API</li>
+              <li class="flex gap-2"><span class="text-sage">—</span>Dynamic rendering of search results</li>
+              <li class="flex gap-2"><span class="text-sage">—</span>Watchlist: add and remove items</li>
+              <li class="flex gap-2"><span class="text-sage">—</span>Responsive layout and light/dark theme</li>
+            </ul>
+                <ul class="mt-4 flex flex-wrap gap-2">
+                <li class="tag">HTML</li>
+                <li class="tag">Tailwind CSS</li>
+                <li class="tag">JavaScript</li>
+                <li class="tag">TVMaze API</li>
+                </ul>
+                <div class="mt-5 flex gap-3">
+                  <a class="btn btn-p !py-2 !text-xs" href="YOUR_MOVIE_TRACKER_DEMO_URL" target="_blank" rel="noopener" aria-label="View Movie Tracker project">View Project</a>
+                  <a class="btn btn-s !py-2 !text-xs" href="YOUR_MOVIE_TRACKER_REPO_URL" target="_blank" rel="noopener" aria-label="Movie Tracker source code">Source Code</a>
+                </div>
+              </div>
+            </article>
 
-          <ul class="mt-8 max-w-xl divide-y divide-bd border-y border-bd">
-            <li class="flex items-center gap-3 py-4">
-              <a
-                id="mail"
-                aria-label="Send email"
-                class="flex items-center gap-4 min-w-0 flex-1"
-                ><span class="ic"
-                  ><svg
-                    width="18"
-                    height="18"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    aria-hidden="true"
-                  >
-                    <rect x="3" y="5" width="18" height="14" rx="2" />
+            <!-- Project 2: Indonesian Sentiment Analysis -->
+            <article class="proj reveal grid md:grid-cols-12 gap-8 items-center">
+              <div class="md:col-span-7 md:order-2">
+                <div class="pv aspect-[16/10] bg-sf border border-bd rounded-sm overflow-hidden" aria-hidden="true">
+                  <div class="p-6 h-full flex flex-col justify-end gap-3 text-[10px] text-mute">
+                    <div class="flex items-end gap-6 h-3/4">
+                      <div class="flex-1 bg-sage rounded-t" style="height:72%"></div>
+                      <div class="flex-1 bg-brand rounded-t" style="height:85.15%"></div>
+                    </div>
+                    <div class="flex gap-6">
+                      <span class="flex-1">Naive Bayes</span>
+                      <span class="flex-1">SVM · 85.15%</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
-                    <path d="M3 7l9 6 9-6" /></svg></span
-                ><span class="min-w-0"
-                  ><span class="block lbl !text-mute">Email</span
-                  ><span
-                    id="mailv"
-                    class="block font-medium truncate"
-                  ></span></span></a
-              ><button
-                id="copy"
-                type="button"
-                data-cursor="copy"
-                class="btn btn-s !py-1.5 !px-3 !text-xs"
-              >
-                Copy
-              </button>
-            </li>
+              <div class="md:col-span-5 md:order-1">
+                <p class="text-gold text-sm font-bold">02</p>
+                <p class="lbl mt-1">Machine Learning / Web Application</p>
+                <h3 class="text-2xl font-bold mt-1 tracking-tight">Indonesian Sentiment Analysis</h3>
+                <p class="mt-3 text-mute text-sm leading-relaxed">
+                  A web-based sentiment analysis application for Indonesian YouTube comments, comparing Naive Bayes and Support Vector Machine models.
+                </p>
+            <ul class="mt-3 text-sm text-mute space-y-1">
+              <li class="flex gap-2"><span class="text-sage">—</span>File upload and prediction workflow</li>
+              <li class="flex gap-2"><span class="text-sage">—</span>Text classification and model comparison</li>
+              <li class="flex gap-2"><span class="text-sage">—</span>FastAPI backend</li>
+              <li class="flex gap-2"><span class="text-sage">—</span>Results summary and evaluation metrics</li>
+            </ul>
+            <p class="mt-3 text-xs text-mute border-l border-gold pl-3">
+              SVM reached 85.15% accuracy on the evaluated dataset; this is not a guarantee for all real-world data.
+            </p>
+                <ul class="mt-4 flex flex-wrap gap-2">
+                <li class="tag">Python</li>
+                <li class="tag">FastAPI</li>
+                <li class="tag">Scikit-learn</li>
+                <li class="tag">TF-IDF</li>
+                <li class="tag">SVM</li>
+                <li class="tag">Naive Bayes</li>
+                </ul>
+                <div class="mt-5 flex gap-3">
+                  <a class="btn btn-p !py-2 !text-xs" href="YOUR_SENTIMENT_DEMO_URL" target="_blank" rel="noopener" aria-label="View Indonesian Sentiment Analysis project">View Project</a>
+                  <a class="btn btn-s !py-2 !text-xs" href="YOUR_SENTIMENT_REPO_URL" target="_blank" rel="noopener" aria-label="Indonesian Sentiment Analysis source code">Source Code</a>
+                </div>
+              </div>
+            </article>
 
-            <li class="py-4">
+            <!-- Project 3: Concertix -->
+            <article class="proj reveal grid md:grid-cols-12 gap-8 items-center">
+              <div class="md:col-span-5">
+                <div class="pv aspect-[16/10] bg-sf border border-bd rounded-sm overflow-hidden" aria-hidden="true">
+                  <div class="h-full grid place-items-center p-6">
+                    <div class="w-full max-w-[240px] border border-brand rounded-md flex">
+                      <div class="flex-1 p-4">
+                        <div class="h-2 w-16 bg-brand mb-2"></div>
+                        <div class="h-2 w-24 bg-bd"></div>
+                      </div>
+                      <div class="border-l border-dashed border-brand px-4 grid place-items-center text-gold text-xs font-bold">№</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="md:col-span-6 md:col-start-7">
+                <p class="text-gold text-sm font-bold">03</p>
+                <p class="lbl mt-1">Fullstack Web Development</p>
+                <h3 class="text-2xl font-bold mt-1 tracking-tight">Concertix</h3>
+                <p class="mt-3 text-mute text-sm leading-relaxed">
+                  A web-based ticketing application concept designed to organize event discovery and ticket purchasing workflows.
+                </p>
+                <ul class="mt-4 flex flex-wrap gap-2">
+                <li class="tag">Laravel</li>
+                <li class="tag">PHP</li>
+                <li class="tag">MySQL</li>
+                <li class="tag">HTML</li>
+                <li class="tag">CSS</li>
+                <li class="tag">JavaScript</li>
+                </ul>
+                <div class="mt-5 flex gap-3">
+                  <a class="btn btn-p !py-2 !text-xs" href="YOUR_CONCERTIX_DEMO_URL" target="_blank" rel="noopener" aria-label="View Concertix project">View Project</a>
+                  <a class="btn btn-s !py-2 !text-xs" href="YOUR_CONCERTIX_REPO_URL" target="_blank" rel="noopener" aria-label="Concertix source code">Source Code</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <!-- Ganti YOUR_EMAIL, YOUR_USERNAME, dan href CV langsung di sini. -->
+      <section id="contact" class="sec sec--alt">
+        <div class="sec__inner">
+          <div class="split">
+            <div class="split__head reveal">
+              <p class="eyebrow">Contact</p>
+              <h2 class="h-lg mt-4">
+                Have a project
+                <span class="outline">in mind?</span>
+              </h2>
+              <p class="sec__lead">
+                I'm open to junior developer opportunities, collaboration, and
+                conversations about building useful digital products.
+              </p>
+
+              <a href="YOUR_CV_FILE.pdf" data-cv download class="btn btn-p mt-8">
+                <svg
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  aria-hidden="true"
+                >
+                  <path d="M12 3v12m0 0l-4-4m4 4l4-4M4 20h16" />
+                </svg>
+                Download CV
+              </a>
+            </div>
+
+            <div class="reveal space-y-3">
+              <div class="clink">
+                <a
+                  id="mail"
+                  href="mailto:YOUR_EMAIL"
+                  aria-label="Send email"
+                  class="flex items-center gap-4 min-w-0 flex-1"
+                >
+                  <span class="ic">
+                    <svg
+                      width="18"
+                      height="18"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      aria-hidden="true"
+                    >
+                      <rect x="3" y="5" width="18" height="14" rx="2" />
+                      <path d="M3 7l9 6 9-6" />
+                    </svg>
+                  </span>
+                  <span class="min-w-0">
+                    <span class="block lbl !text-mute">Email</span>
+                    <span class="block font-medium truncate">YOUR_EMAIL</span>
+                  </span>
+                </a>
+                <button
+                  id="copy"
+                  type="button"
+                  data-copy="YOUR_EMAIL"
+                  class="btn btn-s !py-1.5 !px-3 !text-xs"
+                >
+                  Copy
+                </button>
+              </div>
+
               <a
                 id="gh"
+                href="https://github.com/YOUR_USERNAME"
                 target="_blank"
                 rel="noopener"
                 aria-label="GitHub profile"
-                class="flex items-center gap-4 min-w-0"
-                ><span class="ic"
-                  ><svg
+                class="clink min-w-0"
+              >
+                <span class="ic">
+                  <svg
                     width="18"
                     height="18"
                     viewBox="0 0 24 24"
@@ -403,25 +649,25 @@
                   >
                     <path
                       d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.04-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a10.9 10.9 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.42-2.69 5.39-5.25 5.68.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5z"
-                    /></svg></span
-                ><span class="min-w-0"
-                  ><span class="block lbl !text-mute">GitHub</span
-                  ><span
-                    id="ghv"
-                    class="block font-medium truncate"
-                  ></span></span
-              ></a>
-            </li>
+                    />
+                  </svg>
+                </span>
+                <span class="min-w-0">
+                  <span class="block lbl !text-mute">GitHub</span>
+                  <span class="block font-medium truncate">github.com/YOUR_USERNAME</span>
+                </span>
+              </a>
 
-            <li class="py-4">
               <a
                 id="li"
+                href="https://www.linkedin.com/in/YOUR_USERNAME"
                 target="_blank"
                 rel="noopener"
                 aria-label="LinkedIn profile"
-                class="flex items-center gap-4 min-w-0"
-                ><span class="ic"
-                  ><svg
+                class="clink min-w-0"
+              >
+                <span class="ic">
+                  <svg
                     width="18"
                     height="18"
                     viewBox="0 0 24 24"
@@ -430,54 +676,37 @@
                   >
                     <path
                       d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11.5H3zM9.5 9.75h3.8v1.6h.05c.53-1 1.83-2 3.77-2 4 0 4.78 2.6 4.78 6v5.9h-4v-5.1c0-1.2 0-2.8-1.7-2.8s-1.95 1.3-1.95 2.7v5.2h-4z"
-                    /></svg></span
-                ><span class="min-w-0"
-                  ><span class="block lbl !text-mute">LinkedIn</span
-                  ><span
-                    id="liv"
-                    class="block font-medium truncate"
-                  ></span></span
-              ></a>
-            </li>
-          </ul>
+                    />
+                  </svg>
+                </span>
+                <span class="min-w-0">
+                  <span class="block lbl !text-mute">LinkedIn</span>
+                  <span class="block font-medium truncate">linkedin.com/in/YOUR_USERNAME</span>
+                </span>
+              </a>
 
-          <a data-cv download data-cursor="cta" class="btn btn-p mt-8"
-            ><svg
-              width="15"
-              height="15"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              aria-hidden="true"
-            >
-              <path d="M12 3v12m0 0l-4-4m4 4l4-4M4 20h16" /></svg
-            >Download CV</a
-          >
-
-          <p
-            id="toast"
-            role="status"
-            aria-live="polite"
-            class="mt-4 text-sm text-brand min-h-[1.5rem]"
-          ></p>
+              <p
+                id="toast"
+                role="status"
+                aria-live="polite"
+                class="text-sm text-brand min-h-[1.5rem]"
+              ></p>
+            </div>
+          </div>
         </div>
       </section>
     </main>
 
     <footer class="border-t border-bd">
-      <p class="max-w-6xl mx-auto px-5 py-8 text-xs text-mute">
-        © <span id="yr"></span> — Designed and built by Affan Dzaki Abrar.
-      </p>
+      <div
+        class="max-w-6xl mx-auto px-5 py-8 flex flex-wrap items-center justify-between gap-3 text-xs text-mute"
+      >
+        <p>
+          © <span id="yr"></span> — Designed and built by Affan Dzaki Abrar.
+        </p>
+        <a href="#home" class="ul">Back to top ↑</a>
+      </div>
     </footer>
-
-    <div class="cur" id="cur" aria-hidden="true">
-      <div class="ring"></div>
-
-      <div class="dot"></div>
-
-      <div class="t" id="curt"></div>
-    </div>
 
     <script src="script.js" defer></script>
   </body>
